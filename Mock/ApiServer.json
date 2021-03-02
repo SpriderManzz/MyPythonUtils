@@ -1,0 +1,159 @@
+[
+  {
+    "description": "需携带headers的get请求",
+    "request": {
+      "uri": "/get/with/headers1",
+      "method": "get",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer aa11"
+      }
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+  {
+    "description": "需携带headers的post请求",
+    "request": {
+      "uri": "/post/with/headers1",
+      "method": "post",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer aa11"
+      }
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+  {
+    "description": "无需携带headers的get请求",
+    "request": {
+      "uri": "/get/without/headers1",
+      "method": "get"
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+  {
+    "description": "无需携带headers的post请求",
+    "request": {
+      "uri": "/post/without/headers1",
+      "method": "post"
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+
+  {
+    "description": "需携带header的post请求",
+    "request": {
+      "uri": "/post/with/headers",
+      "method": "post",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGc"
+      },
+      "json": {
+        "userName": "zhangsan",
+        "password": "qq123123"
+      }
+
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+
+
+  {
+    "description": "需携带json的post请求",
+    "request": {
+      "uri": "/post/with/json",
+      "method": "post",
+      "json": {
+        "userName": "zhangsan",
+        "password": "qq123123"
+      }
+    },
+    "response": {
+      "json": {
+        "msg": "success",
+        "status": "1"
+      }
+    }
+  },
+
+
+
+
+
+  {
+    "description":"没有参数返回json的get请求",
+    "request":{
+      "uri":"/getwithoutparam",
+      "method":"get"
+    },
+    "response":{
+      "json": {
+        "name": "zhangsan",
+        "oderId": "OT123"
+      }
+    }
+  },
+
+  {
+    "description": "返回的json存在嵌套",
+    "request": {
+      "uri": "/more_json",
+      "method": "get"
+    },
+    "response": {
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "json": {
+        "result": 1,
+        "data": [
+          {
+            "media_id": "41880",
+            "type": "1"
+          },
+          {
+            "media_id": "41887",
+            "type": "2"
+          },
+          {
+            "media_id": "41888",
+            "type": "3"
+          }
+        ],
+        "msg": "success"
+      }
+    }
+  }
+
+]

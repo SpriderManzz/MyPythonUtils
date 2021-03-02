@@ -1,0 +1,31 @@
+
+一、启动命令
+注意需要在Mock路径下执行命令（修改接口内容会自动重启，无需手动重启）
+java -jar ./moco-runner-1.1.0-standalone.jar http -p 8771 -c MockGetServer.json
+java -jar ./moco-runner-1.1.0-standalone.jar http -p 8772 -c MockPostServer.json
+java -jar ./moco-runner-1.1.0-standalone.jar http -p 8773 -c ApiServer.json
+
+2、相关命令
+{
+  "success": true,
+  "data": {
+    "projects|3-10": [{          		 //数据数量3-10
+      "id": "@id", 						//随机id
+      "date": "@date(yyyy-MM-dd)" , //随机时间   年-月-日
+      "datetime": "@datetime" ,        //随机时间   年-月-日 -当前时间
+      "name": "@cname",     		//随机中文名字
+      "url": "@url",                 		 //随机url
+      "email": "@email",					//随机Email地址
+      "address": "@county(true)",   	 //随机地址，有三级
+      "csentence": "@csentence(3,5)",     //随机中文字 3-5 个
+      "string|1-10": "★",                              //随机★★  ||||||-  1-10个
+      "number|1-100": 100,                     //随机数字   1-100
+      "boolean|1-2": true,						//	随机状态： true | false
+			  "status|1": [								// 随机状态 ：  三选一
+	       "deleted", "published", "draft"
+	     ]
+
+    }]
+  }
+}
+
