@@ -1,6 +1,6 @@
 #coding:utf-8
 import requests
-from utils.read_config import base_url
+from data.config_data import base_url
 import json
 from utils.Log import Logger
 
@@ -33,7 +33,7 @@ class RunMethod:
         return res
 
     def run_main(self, method, url, data=None, header=None):
-        url = base_url+url  # 如果Excel测试数据url路径想用完整的URL注释行即可
+        url = base_url+url  # 如果Excel测试数据url路径想用完整的URL注释此行即可
         res = None
         if method == 'post':
             res = self.post_main(url, data, header)

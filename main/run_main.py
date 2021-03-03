@@ -5,7 +5,7 @@ from base.run_method import RunMethod
 from data.get_data import GetData
 from utils.common_util import CommonUtil
 from utils.send_email import SendEmail
-from utils.read_config import isemail
+from data.config_data import isemail
 
 
 
