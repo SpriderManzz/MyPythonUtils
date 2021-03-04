@@ -2,14 +2,15 @@
 import requests
 from data.config_data import base_url
 import json
-from utils.Log import Logger
+from utils.log import Logger
 
-url_log = Logger('UrlForRequest:').get_logger()
-method_log = Logger('requetsMethod:').get_logger()
+url_log = Logger('UrlForWrite:').get_logger()
+method_log = Logger('method:').get_logger()
 header_log = Logger('header:').get_logger()
-data_log = Logger('data:').get_logger()
-status_log = Logger('statusCode:').get_logger()
+data_log = Logger('req_data:').get_logger()
+status_log = Logger('status:').get_logger()
 res_log = Logger("response:").get_logger()
+response_time_log = Logger("response_time:").get_logger()
 
 class RunMethod:
     """
@@ -45,8 +46,10 @@ class RunMethod:
         method_log.info(method)
         header_log.info(header)
         data_log.info(data)
-        status_log.info(res.status_code)# 输出请求状态码
+        status_log.info(res.status_code) # 输出请求状态码
         res_log.info(res.text)
+        response_time_log.info(res.elapsed.total_seconds()) # 接口响应时间(单位s)
+
 
         return res
 
