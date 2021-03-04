@@ -5,7 +5,7 @@ from utils.get_path import PathUtil
 rootPath = PathUtil().rootPath  # 路径类的类变量
 config_path = os.path.join(rootPath, 'config.ini')  # 将路径进行拼接成F:\项目名称\config.ini
 
-config = configparser.ConfigParser()#  实例化configParser对象
+config = configparser.ConfigParser()    # 实例化configParser对象
 config.read(config_path, encoding='utf-8')
 
 
@@ -13,7 +13,6 @@ class ReadConfig():
     """
     获取配置文件的参数
     """
-
     def get_isRun(self, isRun):
         isRun = config.getint('EXCEL_LINE_INFO', isRun)
         return isRun
@@ -86,9 +85,9 @@ class ReadConfig():
         basepath = config.get('HTTP', basepath)
         return basepath
 
-    def get_port(self, port):
-        port = config.get('HTTP', port)
-        return port
+    def get_url_port(self, url_port):
+        url_port = config.get('HTTP', url_port)
+        return url_port
 
 
     #http://localhost:8773/get/with/headers1
@@ -116,6 +115,31 @@ class ReadConfig():
         receive_user = config.get('EMAIL_INFO', receive_user)
         return receive_user
 
+    def get_host(self, host):
+        host = config.get('DB_INFO', host)
+        return host
+
+    def get_db_port(self, port):
+        db_port = config.getint('DB_INFO', port)
+        return db_port
+
+    def get_user(self, user):
+        user = config.get('DB_INFO', user)
+        return user
+
+    def get_passwd(self, passwd):
+        passwd = config.get('DB_INFO', passwd)
+        return passwd
+
+    def get_db(self, db):
+        db = config.get('DB_INFO', db)
+        return db
+
+
+
+
+
+
 
 
 
@@ -134,15 +158,8 @@ if __name__ == '__main__':
     print('getboolean:', config.getboolean('JUST_TEST', 'isChoice'))
 
 
-
     print('HTTP中的protocol值为:', ReadConfig().get_protocol('protocol'))
     print('HTTP中的domin值为:', ReadConfig().get_domin('domin'))
     print('HTTP中的basepath值为:', ReadConfig().get_basepath('basepath'))
-    print('HTTP中的port值为:', ReadConfig().get_port('port'))
-    print('HTTP中的baseurl值为:', ReadConfig().get_base_url('protocol', 'domin', 'basepath', 'port'))
-
-
-
-
-
-
+    print('HTTP中的port值为:', ReadConfig().get_url_port('url_port'))
+    print('HTTP中的baseurl值为:', ReadConfig().get_base_url('protocol', 'domin', 'basepath', 'url_port'))

@@ -24,8 +24,16 @@ resultDataLine = ReadConfig().get_resultData('resultData')
 protocol = ReadConfig().get_protocol('protocol')
 domin = ReadConfig().get_domin('domin')
 basepath = ReadConfig().get_basepath('basepath')
-port = ReadConfig().get_port('port')
-base_url = protocol + '://' + domin + ':' + port + basepath
+url_port = ReadConfig().get_url_port('url_port')
+base_url = protocol + '://' + domin + ':' + url_port + basepath
+
+
+# 数据库相关
+host = ReadConfig().get_host('host')
+db_port = ReadConfig().get_db_port('db_port')
+user = ReadConfig().get_user('user')
+passwd = ReadConfig().get_passwd('passwd')
+db = ReadConfig().get_db('db')
 
 
 #   邮箱相关

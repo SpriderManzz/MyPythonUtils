@@ -1,9 +1,7 @@
-
 一、启动命令
 注意需要在Mock路径下执行命令（修改接口内容会自动重启，无需手动重启）
-java -jar ./moco-runner-1.1.0-standalone.jar http -p 8771 -c MockGetServer.json
-java -jar ./moco-runner-1.1.0-standalone.jar http -p 8772 -c MockPostServer.json
 java -jar ./moco-runner-1.1.0-standalone.jar http -p 8773 -c ApiServer.json
+
 
 2、相关命令
 {
