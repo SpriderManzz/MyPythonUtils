@@ -9,9 +9,9 @@ class SendEmail:
     def send_mail(self, user_list, sub, content):
         user = "张三" + "<" + senduser + ">"
         message = MIMEText(content, _subtype='plain', _charset='utf-8')
-        message['Subject'] = sub # 定义标题
+        message['Subject'] = sub  # 定义标题
         message['From'] = user  # 发送人
-        message['To'] = ";".join(user_list) # 接收人
+        message['To'] = ";".join(user_list)  # 接收人
         server = smtplib.SMTP()
         server.connect(smtpserver)
         server.login(senduser, password)

@@ -4,7 +4,6 @@ from utils.get_path import PathUtil
 
 rootPath = PathUtil().rootPath  # 路径类的类变量
 config_path = os.path.join(rootPath, 'config.ini')  # 将路径进行拼接成F:\项目名称\config.ini
-
 config = configparser.ConfigParser()    # 实例化configParser对象
 config.read(config_path, encoding='utf-8')
 
@@ -134,13 +133,6 @@ class ReadConfig():
     def get_db(self, db):
         db = config.get('DB_INFO', db)
         return db
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

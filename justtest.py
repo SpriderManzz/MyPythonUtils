@@ -57,6 +57,19 @@ headers={'Content-Type': 'application/json', 'Authorization': 'Bearer 11cget'}
 url='http://localhost:8773/get/with/headers1'
 a = requests.get(url=url,headers=headers)
 print(a)
+data1 ={
+"userName": "zhangsan",
+"password": "qq123123"
+}
+print(type(data1))
+
+
+b = requests.post('http://localhost:8773/post/with/json', json=data1)
+
+print(type(b.text))
+print(b.json())
+print(type(b.json()))
+
 
 
 

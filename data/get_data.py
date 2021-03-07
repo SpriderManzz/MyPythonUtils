@@ -41,7 +41,7 @@ class GetData:
         if headerValue == '':
             return None
         else:
-            headerValue = json.loads(headerValue)# 转成json
+            headerValue = json.loads(headerValue)  # 转成json
             return headerValue
 
     # 获取url
@@ -63,7 +63,6 @@ class GetData:
         if expect == '':
             return None
         return expect
-
 
     def writeResultValue(self,row,vaule):
         #col = int(data_config.getResultLine())

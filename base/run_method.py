@@ -14,7 +14,8 @@ response_time_log = Logger("response_time:").get_logger()
 
 class RunMethod:
     """
-    封装get和post请求，调用run_main函数会传递method,url,但是data和header有可能为空
+    封装get和post请求
+    调用run_main函数会传递method,url,但是data和header有可能为空
     """
     def post_main(self, url, data, header=None):
         res = None
@@ -42,17 +43,15 @@ class RunMethod:
             res = self.get_main(url, data, header)
         else:
             print("暂时只支持post和get,请检查参数！")
-        url_log.info(url)               # 输出请求URL
+        url_log.info(url)  # 输出请求URL
         method_log.info(method)
         header_log.info(header)
         data_log.info(data)
-        status_log.info(res.status_code) # 输出请求状态码
+        status_log.info(res.status_code)  # 输出请求状态码
         res_log.info(res.text)
-        response_time_log.info(res.elapsed.total_seconds()) # 接口响应时间(单位s)
-
+        response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
 
         return res
-
 
 
 if __name__ == '__main__':

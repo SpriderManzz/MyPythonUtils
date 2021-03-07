@@ -4,7 +4,7 @@ from utils.read_config import ReadConfig
     调用readConfig从配置文件获取配置文件中的参数
 """
 
-#   Excel用例的列号
+# Excel用例的列号
 isRunLine = ReadConfig().get_isRun('isRun')
 caseIdLine = ReadConfig().get_caseId('caseId')
 modelNameLine = ReadConfig().get_modelName('modelName')
@@ -36,10 +36,10 @@ passwd = ReadConfig().get_passwd('passwd')
 db = ReadConfig().get_db('db')
 
 
-#   邮箱相关
+# 邮箱相关
 smtpserver =ReadConfig().get_smtpserver('smtpserver')
 isemail = ReadConfig().get_is_email('isemail')
 senduser = ReadConfig().get_senduser('senduser')
 password =ReadConfig().get_password('password')
 receive_user = ReadConfig().get_receive_user('receive_user')
-receive_user_list = receive_user.strip(',').split(',') # 字符串转变成list列表
+receive_user_list = receive_user.strip(',').split(',')  # 字符串转变成list列表

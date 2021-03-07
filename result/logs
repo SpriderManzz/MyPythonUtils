@@ -185,3 +185,579 @@
 2021-03-05 03:05:39,850 - status: - INFO - 200
 2021-03-05 03:05:39,850 - response: - INFO - {"msg":"success","status":"1"}
 2021-03-05 03:05:39,850 - response_time: - INFO - 0.009897
+2021-03-05 23:45:19,455 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-05 23:45:19,475 - method: - INFO - get
+2021-03-05 23:45:19,475 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-05 23:45:19,475 - req_data: - INFO - None
+2021-03-05 23:45:19,476 - status: - INFO - 200
+2021-03-05 23:45:19,476 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,476 - response_time: - INFO - 0.966182
+2021-03-05 23:45:19,538 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-05 23:45:19,538 - method: - INFO - post
+2021-03-05 23:45:19,538 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-05 23:45:19,539 - req_data: - INFO - None
+2021-03-05 23:45:19,539 - status: - INFO - 200
+2021-03-05 23:45:19,539 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,539 - response_time: - INFO - 0.00966
+2021-03-05 23:45:19,603 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-05 23:45:19,603 - method: - INFO - get
+2021-03-05 23:45:19,603 - header: - INFO - None
+2021-03-05 23:45:19,603 - req_data: - INFO - None
+2021-03-05 23:45:19,603 - status: - INFO - 200
+2021-03-05 23:45:19,603 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,603 - response_time: - INFO - 0.055251
+2021-03-05 23:45:19,672 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-05 23:45:19,673 - method: - INFO - post
+2021-03-05 23:45:19,673 - header: - INFO - None
+2021-03-05 23:45:19,673 - req_data: - INFO - None
+2021-03-05 23:45:19,673 - status: - INFO - 200
+2021-03-05 23:45:19,673 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,674 - response_time: - INFO - 0.061097
+2021-03-05 23:45:19,717 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-05 23:45:19,717 - method: - INFO - get
+2021-03-05 23:45:19,718 - header: - INFO - None
+2021-03-05 23:45:19,718 - req_data: - INFO - None
+2021-03-05 23:45:19,718 - status: - INFO - 200
+2021-03-05 23:45:19,718 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,718 - response_time: - INFO - 0.035639
+2021-03-05 23:45:19,750 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-05 23:45:19,750 - method: - INFO - post
+2021-03-05 23:45:19,750 - header: - INFO - None
+2021-03-05 23:45:19,751 - req_data: - INFO - None
+2021-03-05 23:45:19,751 - status: - INFO - 200
+2021-03-05 23:45:19,751 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,751 - response_time: - INFO - 0.022488
+2021-03-05 23:45:19,811 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-05 23:45:19,811 - method: - INFO - post
+2021-03-05 23:45:19,811 - header: - INFO - None
+2021-03-05 23:45:19,812 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-05 23:45:19,812 - status: - INFO - 200
+2021-03-05 23:45:19,812 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:45:19,812 - response_time: - INFO - 0.050158
+2021-03-05 23:46:51,495 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-05 23:46:51,496 - method: - INFO - get
+2021-03-05 23:46:51,496 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-05 23:46:51,496 - req_data: - INFO - None
+2021-03-05 23:46:51,497 - status: - INFO - 200
+2021-03-05 23:46:51,516 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:46:51,517 - response_time: - INFO - 0.018621
+2021-03-05 23:47:02,370 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-05 23:47:02,371 - method: - INFO - post
+2021-03-05 23:47:02,371 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-05 23:47:02,371 - req_data: - INFO - None
+2021-03-05 23:47:02,371 - status: - INFO - 200
+2021-03-05 23:47:02,371 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:47:02,371 - response_time: - INFO - 0.008267
+2021-03-05 23:47:07,648 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-05 23:47:07,649 - method: - INFO - get
+2021-03-05 23:47:07,649 - header: - INFO - None
+2021-03-05 23:47:07,649 - req_data: - INFO - None
+2021-03-05 23:47:07,649 - status: - INFO - 200
+2021-03-05 23:47:07,649 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:47:07,649 - response_time: - INFO - 0.012823
+2021-03-05 23:47:14,381 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-05 23:47:14,382 - method: - INFO - post
+2021-03-05 23:47:14,382 - header: - INFO - None
+2021-03-05 23:47:14,382 - req_data: - INFO - None
+2021-03-05 23:47:14,382 - status: - INFO - 200
+2021-03-05 23:47:14,382 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:47:14,382 - response_time: - INFO - 0.043848
+2021-03-05 23:48:50,891 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-05 23:48:50,891 - method: - INFO - post
+2021-03-05 23:48:50,892 - header: - INFO - None
+2021-03-05 23:48:50,892 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-05 23:48:50,892 - status: - INFO - 200
+2021-03-05 23:48:50,893 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-05 23:48:50,893 - response_time: - INFO - 0.031861
+2021-03-06 00:02:26,207 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 00:02:26,260 - method: - INFO - post
+2021-03-06 00:02:26,260 - header: - INFO - None
+2021-03-06 00:02:26,260 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 00:02:26,260 - status: - INFO - 200
+2021-03-06 00:02:26,260 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 00:02:26,260 - response_time: - INFO - 0.026104
+2021-03-06 14:42:04,102 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:42:04,112 - method: - INFO - post
+2021-03-06 14:42:04,112 - header: - INFO - None
+2021-03-06 14:42:04,112 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:42:04,112 - status: - INFO - 200
+2021-03-06 14:42:04,112 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:42:04,112 - response_time: - INFO - 0.251595
+2021-03-06 14:42:17,658 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:42:17,658 - method: - INFO - post
+2021-03-06 14:42:17,658 - header: - INFO - None
+2021-03-06 14:42:17,658 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:42:17,658 - status: - INFO - 200
+2021-03-06 14:42:17,658 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:42:17,658 - response_time: - INFO - 0.013941
+2021-03-06 14:43:11,292 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:43:11,292 - method: - INFO - post
+2021-03-06 14:43:11,292 - header: - INFO - None
+2021-03-06 14:43:11,292 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:43:11,292 - status: - INFO - 200
+2021-03-06 14:43:11,292 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:43:11,292 - response_time: - INFO - 0.013682
+2021-03-06 14:43:27,406 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:43:27,406 - method: - INFO - post
+2021-03-06 14:43:27,406 - header: - INFO - None
+2021-03-06 14:43:27,406 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:43:27,406 - status: - INFO - 200
+2021-03-06 14:43:27,406 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:43:27,406 - response_time: - INFO - 0.01243
+2021-03-06 14:43:29,065 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:43:29,065 - method: - INFO - post
+2021-03-06 14:43:29,065 - header: - INFO - None
+2021-03-06 14:43:29,065 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:43:29,065 - status: - INFO - 200
+2021-03-06 14:43:29,065 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:43:29,065 - response_time: - INFO - 0.013095
+2021-03-06 14:43:36,792 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 14:43:36,793 - method: - INFO - post
+2021-03-06 14:43:36,794 - header: - INFO - None
+2021-03-06 14:43:36,794 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 14:43:36,795 - status: - INFO - 200
+2021-03-06 14:43:36,795 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 14:43:36,795 - response_time: - INFO - 0.01648
+2021-03-06 15:10:56,019 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 15:10:56,053 - method: - INFO - get
+2021-03-06 15:10:56,053 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:10:56,053 - req_data: - INFO - None
+2021-03-06 15:10:56,053 - status: - INFO - 200
+2021-03-06 15:10:56,053 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,053 - response_time: - INFO - 0.324104
+2021-03-06 15:10:56,103 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 15:10:56,103 - method: - INFO - post
+2021-03-06 15:10:56,103 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:10:56,103 - req_data: - INFO - None
+2021-03-06 15:10:56,103 - status: - INFO - 200
+2021-03-06 15:10:56,103 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,103 - response_time: - INFO - 0.015891
+2021-03-06 15:10:56,126 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:10:56,127 - method: - INFO - get
+2021-03-06 15:10:56,127 - header: - INFO - None
+2021-03-06 15:10:56,127 - req_data: - INFO - None
+2021-03-06 15:10:56,127 - status: - INFO - 200
+2021-03-06 15:10:56,127 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,127 - response_time: - INFO - 0.014736
+2021-03-06 15:10:56,163 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:10:56,163 - method: - INFO - post
+2021-03-06 15:10:56,163 - header: - INFO - None
+2021-03-06 15:10:56,163 - req_data: - INFO - None
+2021-03-06 15:10:56,163 - status: - INFO - 200
+2021-03-06 15:10:56,163 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,163 - response_time: - INFO - 0.030787
+2021-03-06 15:10:56,177 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:10:56,177 - method: - INFO - get
+2021-03-06 15:10:56,177 - header: - INFO - None
+2021-03-06 15:10:56,177 - req_data: - INFO - None
+2021-03-06 15:10:56,177 - status: - INFO - 200
+2021-03-06 15:10:56,177 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,177 - response_time: - INFO - 0.007725
+2021-03-06 15:10:56,193 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:10:56,193 - method: - INFO - post
+2021-03-06 15:10:56,193 - header: - INFO - None
+2021-03-06 15:10:56,193 - req_data: - INFO - None
+2021-03-06 15:10:56,194 - status: - INFO - 200
+2021-03-06 15:10:56,194 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,194 - response_time: - INFO - 0.00871
+2021-03-06 15:10:56,246 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 15:10:56,246 - method: - INFO - post
+2021-03-06 15:10:56,246 - header: - INFO - None
+2021-03-06 15:10:56,246 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 15:10:56,246 - status: - INFO - 200
+2021-03-06 15:10:56,246 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:10:56,246 - response_time: - INFO - 0.042452
+2021-03-06 15:40:59,504 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 15:40:59,504 - method: - INFO - get
+2021-03-06 15:40:59,504 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:40:59,504 - req_data: - INFO - None
+2021-03-06 15:40:59,504 - status: - INFO - 200
+2021-03-06 15:40:59,504 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,504 - response_time: - INFO - 0.013636
+2021-03-06 15:40:59,522 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 15:40:59,522 - method: - INFO - post
+2021-03-06 15:40:59,522 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:40:59,522 - req_data: - INFO - None
+2021-03-06 15:40:59,522 - status: - INFO - 200
+2021-03-06 15:40:59,522 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,522 - response_time: - INFO - 0.007791
+2021-03-06 15:40:59,537 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:40:59,537 - method: - INFO - get
+2021-03-06 15:40:59,538 - header: - INFO - None
+2021-03-06 15:40:59,538 - req_data: - INFO - None
+2021-03-06 15:40:59,538 - status: - INFO - 200
+2021-03-06 15:40:59,538 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,538 - response_time: - INFO - 0.006824
+2021-03-06 15:40:59,549 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:40:59,549 - method: - INFO - post
+2021-03-06 15:40:59,549 - header: - INFO - None
+2021-03-06 15:40:59,549 - req_data: - INFO - None
+2021-03-06 15:40:59,549 - status: - INFO - 200
+2021-03-06 15:40:59,549 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,549 - response_time: - INFO - 0.006536
+2021-03-06 15:40:59,565 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:40:59,565 - method: - INFO - get
+2021-03-06 15:40:59,565 - header: - INFO - None
+2021-03-06 15:40:59,565 - req_data: - INFO - None
+2021-03-06 15:40:59,565 - status: - INFO - 200
+2021-03-06 15:40:59,565 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,565 - response_time: - INFO - 0.005792
+2021-03-06 15:40:59,580 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:40:59,580 - method: - INFO - post
+2021-03-06 15:40:59,580 - header: - INFO - None
+2021-03-06 15:40:59,580 - req_data: - INFO - None
+2021-03-06 15:40:59,580 - status: - INFO - 200
+2021-03-06 15:40:59,580 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,580 - response_time: - INFO - 0.007277
+2021-03-06 15:40:59,595 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 15:40:59,595 - method: - INFO - post
+2021-03-06 15:40:59,595 - header: - INFO - None
+2021-03-06 15:40:59,595 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 15:40:59,595 - status: - INFO - 200
+2021-03-06 15:40:59,595 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:40:59,595 - response_time: - INFO - 0.007741
+2021-03-06 15:43:04,773 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 15:43:04,774 - method: - INFO - get
+2021-03-06 15:43:04,774 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:43:04,775 - req_data: - INFO - None
+2021-03-06 15:43:04,775 - status: - INFO - 200
+2021-03-06 15:43:04,775 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,775 - response_time: - INFO - 0.012677
+2021-03-06 15:43:04,794 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 15:43:04,794 - method: - INFO - post
+2021-03-06 15:43:04,794 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 15:43:04,794 - req_data: - INFO - None
+2021-03-06 15:43:04,794 - status: - INFO - 200
+2021-03-06 15:43:04,794 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,794 - response_time: - INFO - 0.005509
+2021-03-06 15:43:04,808 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:43:04,808 - method: - INFO - get
+2021-03-06 15:43:04,808 - header: - INFO - None
+2021-03-06 15:43:04,808 - req_data: - INFO - None
+2021-03-06 15:43:04,808 - status: - INFO - 200
+2021-03-06 15:43:04,808 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,808 - response_time: - INFO - 0.007748
+2021-03-06 15:43:04,827 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:43:04,827 - method: - INFO - post
+2021-03-06 15:43:04,827 - header: - INFO - None
+2021-03-06 15:43:04,827 - req_data: - INFO - None
+2021-03-06 15:43:04,827 - status: - INFO - 200
+2021-03-06 15:43:04,827 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,827 - response_time: - INFO - 0.007429
+2021-03-06 15:43:04,842 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 15:43:04,843 - method: - INFO - get
+2021-03-06 15:43:04,843 - header: - INFO - None
+2021-03-06 15:43:04,843 - req_data: - INFO - None
+2021-03-06 15:43:04,843 - status: - INFO - 200
+2021-03-06 15:43:04,843 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,843 - response_time: - INFO - 0.007723
+2021-03-06 15:43:04,859 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 15:43:04,859 - method: - INFO - post
+2021-03-06 15:43:04,859 - header: - INFO - None
+2021-03-06 15:43:04,859 - req_data: - INFO - None
+2021-03-06 15:43:04,859 - status: - INFO - 200
+2021-03-06 15:43:04,859 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,859 - response_time: - INFO - 0.006108
+2021-03-06 15:43:04,880 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 15:43:04,880 - method: - INFO - post
+2021-03-06 15:43:04,880 - header: - INFO - None
+2021-03-06 15:43:04,880 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 15:43:04,882 - status: - INFO - 200
+2021-03-06 15:43:04,882 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 15:43:04,882 - response_time: - INFO - 0.011626
+2021-03-06 22:42:53,415 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 22:42:53,499 - method: - INFO - get
+2021-03-06 22:42:53,499 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 22:42:53,499 - req_data: - INFO - None
+2021-03-06 22:42:53,500 - status: - INFO - 200
+2021-03-06 22:42:53,500 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,526 - response_time: - INFO - 0.45934
+2021-03-06 22:42:53,557 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 22:42:53,557 - method: - INFO - post
+2021-03-06 22:42:53,557 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 22:42:53,557 - req_data: - INFO - None
+2021-03-06 22:42:53,557 - status: - INFO - 200
+2021-03-06 22:42:53,557 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,557 - response_time: - INFO - 0.012334
+2021-03-06 22:42:53,573 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 22:42:53,574 - method: - INFO - get
+2021-03-06 22:42:53,574 - header: - INFO - None
+2021-03-06 22:42:53,574 - req_data: - INFO - None
+2021-03-06 22:42:53,574 - status: - INFO - 200
+2021-03-06 22:42:53,574 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,574 - response_time: - INFO - 0.009779
+2021-03-06 22:42:53,623 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 22:42:53,623 - method: - INFO - post
+2021-03-06 22:42:53,624 - header: - INFO - None
+2021-03-06 22:42:53,624 - req_data: - INFO - None
+2021-03-06 22:42:53,624 - status: - INFO - 200
+2021-03-06 22:42:53,624 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,624 - response_time: - INFO - 0.040546
+2021-03-06 22:42:53,638 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 22:42:53,638 - method: - INFO - get
+2021-03-06 22:42:53,638 - header: - INFO - None
+2021-03-06 22:42:53,638 - req_data: - INFO - None
+2021-03-06 22:42:53,639 - status: - INFO - 200
+2021-03-06 22:42:53,639 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,639 - response_time: - INFO - 0.006818
+2021-03-06 22:42:53,652 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 22:42:53,652 - method: - INFO - post
+2021-03-06 22:42:53,652 - header: - INFO - None
+2021-03-06 22:42:53,652 - req_data: - INFO - None
+2021-03-06 22:42:53,652 - status: - INFO - 200
+2021-03-06 22:42:53,652 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:53,652 - response_time: - INFO - 0.007527
+2021-03-06 22:42:54,033 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 22:42:54,033 - method: - INFO - post
+2021-03-06 22:42:54,033 - header: - INFO - None
+2021-03-06 22:42:54,033 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 22:42:54,033 - status: - INFO - 200
+2021-03-06 22:42:54,033 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:42:54,033 - response_time: - INFO - 0.373844
+2021-03-06 22:43:53,076 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 22:43:53,076 - method: - INFO - get
+2021-03-06 22:43:53,076 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 22:43:53,076 - req_data: - INFO - None
+2021-03-06 22:43:53,076 - status: - INFO - 200
+2021-03-06 22:43:53,076 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,076 - response_time: - INFO - 0.011024
+2021-03-06 22:43:53,096 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 22:43:53,096 - method: - INFO - post
+2021-03-06 22:43:53,096 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 22:43:53,096 - req_data: - INFO - None
+2021-03-06 22:43:53,096 - status: - INFO - 200
+2021-03-06 22:43:53,096 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,096 - response_time: - INFO - 0.00639
+2021-03-06 22:43:53,106 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 22:43:53,106 - method: - INFO - get
+2021-03-06 22:43:53,106 - header: - INFO - None
+2021-03-06 22:43:53,106 - req_data: - INFO - None
+2021-03-06 22:43:53,106 - status: - INFO - 200
+2021-03-06 22:43:53,106 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,106 - response_time: - INFO - 0.005151
+2021-03-06 22:43:53,126 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 22:43:53,126 - method: - INFO - post
+2021-03-06 22:43:53,126 - header: - INFO - None
+2021-03-06 22:43:53,126 - req_data: - INFO - None
+2021-03-06 22:43:53,126 - status: - INFO - 200
+2021-03-06 22:43:53,126 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,126 - response_time: - INFO - 0.00794
+2021-03-06 22:43:53,136 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 22:43:53,136 - method: - INFO - get
+2021-03-06 22:43:53,136 - header: - INFO - None
+2021-03-06 22:43:53,136 - req_data: - INFO - None
+2021-03-06 22:43:53,136 - status: - INFO - 200
+2021-03-06 22:43:53,136 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,136 - response_time: - INFO - 0.005135
+2021-03-06 22:43:53,146 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 22:43:53,146 - method: - INFO - post
+2021-03-06 22:43:53,146 - header: - INFO - None
+2021-03-06 22:43:53,146 - req_data: - INFO - None
+2021-03-06 22:43:53,146 - status: - INFO - 200
+2021-03-06 22:43:53,146 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,146 - response_time: - INFO - 0.007218
+2021-03-06 22:43:53,166 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 22:43:53,166 - method: - INFO - post
+2021-03-06 22:43:53,166 - header: - INFO - None
+2021-03-06 22:43:53,166 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 22:43:53,166 - status: - INFO - 200
+2021-03-06 22:43:53,166 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 22:43:53,166 - response_time: - INFO - 0.006407
+2021-03-06 23:07:32,257 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 23:07:32,257 - method: - INFO - get
+2021-03-06 23:07:32,258 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:07:32,258 - req_data: - INFO - None
+2021-03-06 23:07:32,259 - status: - INFO - 200
+2021-03-06 23:07:32,259 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,259 - response_time: - INFO - 0.014197
+2021-03-06 23:07:32,273 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 23:07:32,273 - method: - INFO - post
+2021-03-06 23:07:32,273 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:07:32,273 - req_data: - INFO - None
+2021-03-06 23:07:32,273 - status: - INFO - 200
+2021-03-06 23:07:32,273 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,273 - response_time: - INFO - 0.007613
+2021-03-06 23:07:32,292 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:07:32,293 - method: - INFO - get
+2021-03-06 23:07:32,293 - header: - INFO - None
+2021-03-06 23:07:32,293 - req_data: - INFO - None
+2021-03-06 23:07:32,293 - status: - INFO - 200
+2021-03-06 23:07:32,293 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,293 - response_time: - INFO - 0.005991
+2021-03-06 23:07:32,312 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:07:32,312 - method: - INFO - post
+2021-03-06 23:07:32,312 - header: - INFO - None
+2021-03-06 23:07:32,312 - req_data: - INFO - None
+2021-03-06 23:07:32,312 - status: - INFO - 200
+2021-03-06 23:07:32,312 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,313 - response_time: - INFO - 0.010273
+2021-03-06 23:07:32,324 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:07:32,324 - method: - INFO - get
+2021-03-06 23:07:32,324 - header: - INFO - None
+2021-03-06 23:07:32,324 - req_data: - INFO - None
+2021-03-06 23:07:32,324 - status: - INFO - 200
+2021-03-06 23:07:32,324 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,324 - response_time: - INFO - 0.006
+2021-03-06 23:07:32,339 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:07:32,339 - method: - INFO - post
+2021-03-06 23:07:32,340 - header: - INFO - None
+2021-03-06 23:07:32,340 - req_data: - INFO - None
+2021-03-06 23:07:32,340 - status: - INFO - 200
+2021-03-06 23:07:32,340 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,340 - response_time: - INFO - 0.009365
+2021-03-06 23:07:32,355 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 23:07:32,355 - method: - INFO - post
+2021-03-06 23:07:32,355 - header: - INFO - None
+2021-03-06 23:07:32,355 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 23:07:32,355 - status: - INFO - 200
+2021-03-06 23:07:32,356 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:07:32,356 - response_time: - INFO - 0.007597
+2021-03-06 23:09:12,733 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 23:09:12,734 - method: - INFO - get
+2021-03-06 23:09:12,734 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:09:12,734 - req_data: - INFO - None
+2021-03-06 23:09:12,735 - status: - INFO - 200
+2021-03-06 23:09:12,735 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,735 - response_time: - INFO - 0.011262
+2021-03-06 23:09:12,750 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 23:09:12,750 - method: - INFO - post
+2021-03-06 23:09:12,750 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:09:12,751 - req_data: - INFO - None
+2021-03-06 23:09:12,751 - status: - INFO - 200
+2021-03-06 23:09:12,751 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,751 - response_time: - INFO - 0.007048
+2021-03-06 23:09:12,766 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:09:12,766 - method: - INFO - get
+2021-03-06 23:09:12,766 - header: - INFO - None
+2021-03-06 23:09:12,766 - req_data: - INFO - None
+2021-03-06 23:09:12,766 - status: - INFO - 200
+2021-03-06 23:09:12,767 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,767 - response_time: - INFO - 0.004766
+2021-03-06 23:09:12,785 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:09:12,785 - method: - INFO - post
+2021-03-06 23:09:12,785 - header: - INFO - None
+2021-03-06 23:09:12,785 - req_data: - INFO - None
+2021-03-06 23:09:12,785 - status: - INFO - 200
+2021-03-06 23:09:12,785 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,786 - response_time: - INFO - 0.007297
+2021-03-06 23:09:12,799 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:09:12,799 - method: - INFO - get
+2021-03-06 23:09:12,799 - header: - INFO - None
+2021-03-06 23:09:12,799 - req_data: - INFO - None
+2021-03-06 23:09:12,799 - status: - INFO - 200
+2021-03-06 23:09:12,799 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,799 - response_time: - INFO - 0.007115
+2021-03-06 23:09:12,813 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:09:12,814 - method: - INFO - post
+2021-03-06 23:09:12,814 - header: - INFO - None
+2021-03-06 23:09:12,814 - req_data: - INFO - None
+2021-03-06 23:09:12,814 - status: - INFO - 200
+2021-03-06 23:09:12,814 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,814 - response_time: - INFO - 0.006015
+2021-03-06 23:09:12,830 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 23:09:12,830 - method: - INFO - post
+2021-03-06 23:09:12,830 - header: - INFO - None
+2021-03-06 23:09:12,830 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 23:09:12,830 - status: - INFO - 200
+2021-03-06 23:09:12,831 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:12,831 - response_time: - INFO - 0.00705
+2021-03-06 23:09:17,920 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-06 23:09:17,921 - method: - INFO - get
+2021-03-06 23:09:17,921 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:09:17,921 - req_data: - INFO - None
+2021-03-06 23:09:17,922 - status: - INFO - 200
+2021-03-06 23:09:17,922 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:17,922 - response_time: - INFO - 0.011098
+2021-03-06 23:09:17,937 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-06 23:09:17,937 - method: - INFO - post
+2021-03-06 23:09:17,937 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-06 23:09:17,937 - req_data: - INFO - None
+2021-03-06 23:09:17,937 - status: - INFO - 200
+2021-03-06 23:09:17,937 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:17,937 - response_time: - INFO - 0.006038
+2021-03-06 23:09:17,967 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:09:17,967 - method: - INFO - get
+2021-03-06 23:09:17,967 - header: - INFO - None
+2021-03-06 23:09:17,967 - req_data: - INFO - None
+2021-03-06 23:09:17,967 - status: - INFO - 200
+2021-03-06 23:09:17,967 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:17,967 - response_time: - INFO - 0.00526
+2021-03-06 23:09:17,990 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:09:17,990 - method: - INFO - post
+2021-03-06 23:09:17,990 - header: - INFO - None
+2021-03-06 23:09:17,990 - req_data: - INFO - None
+2021-03-06 23:09:17,990 - status: - INFO - 200
+2021-03-06 23:09:17,991 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:17,991 - response_time: - INFO - 0.013886
+2021-03-06 23:09:18,004 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-06 23:09:18,004 - method: - INFO - get
+2021-03-06 23:09:18,004 - header: - INFO - None
+2021-03-06 23:09:18,004 - req_data: - INFO - None
+2021-03-06 23:09:18,004 - status: - INFO - 200
+2021-03-06 23:09:18,004 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:18,004 - response_time: - INFO - 0.0054
+2021-03-06 23:09:18,020 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-06 23:09:18,020 - method: - INFO - post
+2021-03-06 23:09:18,020 - header: - INFO - None
+2021-03-06 23:09:18,020 - req_data: - INFO - None
+2021-03-06 23:09:18,021 - status: - INFO - 200
+2021-03-06 23:09:18,021 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:18,021 - response_time: - INFO - 0.00615
+2021-03-06 23:09:18,034 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-06 23:09:18,034 - method: - INFO - post
+2021-03-06 23:09:18,034 - header: - INFO - None
+2021-03-06 23:09:18,034 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-06 23:09:18,034 - status: - INFO - 200
+2021-03-06 23:09:18,034 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-06 23:09:18,034 - response_time: - INFO - 0.005427
