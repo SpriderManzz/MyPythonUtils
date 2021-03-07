@@ -51,7 +51,7 @@ class GetData:
 
     # 获取请求数据
     def getDataValue(self, row):
-        data = self.opera_excel.getCellValue(row, requestDataLine)
+        data = self.opera_excel.getCellValue(row, requestDataLine).replace(" ", "").replace('\n', '')
         if data == '':
             return None
         return data

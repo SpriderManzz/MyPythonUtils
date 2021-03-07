@@ -30,7 +30,7 @@ class RunTest:
                     url = self.data.getUrlValue(row)
                     method = self.data.getRequestMethodValue(row)
                     run = self.data.getRunValue(row)
-                    data = self.data.getDataValue(row)
+                    data = self.data.getDataValue(row)  # 此时的data已处理空格和换行符
                     header = self.data.getHeaderValue(row) # 此时已经是dict
                     expect = self.data.getExpectValue(row)
                     if run:

@@ -98,11 +98,11 @@ class ReadConfig():
         smtpserver = config.get('EMAIL_INFO', smtpserver)
         return smtpserver
 
-    def get_is_email(self,isemail):
+    def get_is_email(self, isemail):
         isemail = config.getboolean('EMAIL_INFO', isemail)
         return isemail
 
-    def get_senduser(self,senduser):
+    def get_senduser(self, senduser):
         senduser = config.get('EMAIL_INFO', senduser)
         return senduser
 

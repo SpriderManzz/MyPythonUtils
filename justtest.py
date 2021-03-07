@@ -1,11 +1,12 @@
-#coding:utf-8
+# coding:utf-8
 import requests
 import json
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
 }
 
-#get只有url是必填，params是选填参数
+# get只有url是必填，params是选填参数
 
 # 响应内容
 # r.content 响应内容的字节码，一般处理二进制文件
@@ -25,7 +26,6 @@ headers = {
 # verify 是否校验证书
 # stream 如果为False，则响应内容将直接全部下载
 # cert 客户端证书地址
-
 
 
 # # get只携带url
@@ -52,24 +52,19 @@ dic = {'a': 1, 'b': 2, 'c': 3}
 js = json.dumps(dic, sort_keys=True, indent=4, separators=(',', ':'))
 print(js)
 
+print("-------------------格式json----------------------------")
 
-headers={'Content-Type': 'application/json', 'Authorization': 'Bearer 11cget'}
-url='http://localhost:8773/get/with/headers1'
-a = requests.get(url=url,headers=headers)
-print(a)
-data1 ={
-"userName": "zhangsan",
-"password": "qq123123"
+dict = {
+    "userName": "zhangsan",
+    "password": 123123,
+    "sex": "man"
 }
-print(type(data1))
+print(type(dict))
+
+r = requests.post('http://localhost:8773/post/with/json', data=dict)
+
+print(r.status_code)
+print(type(r.json()))
 
 
-b = requests.post('http://localhost:8773/post/with/json', json=data1)
-
-print(type(b.text))
-print(b.json())
-print(type(b.json()))
-
-
-
-
+#print(type(b.json()))

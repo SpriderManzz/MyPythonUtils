@@ -1,6 +1,6 @@
 [
   {
-    "description": "需携带headers的get请求",
+    "description": "需携带headers的get请求-----勿动",
     "request": {
       "uri": "/get/with/headers1",
       "method": "get",
@@ -18,7 +18,7 @@
   },
 
   {
-    "description": "需携带headers的post请求",
+    "description": "需携带headers的post请求----勿动",
     "request": {
       "uri": "/post/with/headers1",
       "method": "post",
@@ -36,7 +36,7 @@
   },
 
   {
-    "description": "无需携带headers的get请求",
+    "description": "无需携带headers的get请求----勿动",
     "request": {
       "uri": "/get/without/headers1",
       "method": "get"
@@ -50,53 +50,14 @@
   },
 
   {
-    "description": "无需携带headers的post请求",
+    "description": "无需携带headers的post请求---勿动",
     "request": {
       "uri": "/post/without/headers1",
-      "method": "post"
-    },
-    "response": {
-      "json": {
-        "msg": "success",
-        "status": "1"
-      }
-    }
-  },
-
-
-  {
-    "description": "需携带header的post请求",
-    "request": {
-      "uri": "/post/with/headers",
-      "method": "post",
-      "headers": {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer eyJhbGc"
-      },
-      "json": {
-        "userName": "zhangsan",
-        "password": "qq123123"
-      }
-
-    },
-    "response": {
-      "json": {
-        "msg": "success",
-        "status": "1"
-      }
-    }
-  },
-
-
-
-  {
-    "description": "需携带json的post请求",
-    "request": {
-      "uri": "/post/with/json",
       "method": "post",
       "json": {
         "userName": "zhangsan",
-        "password": "qq123123"
+        "password": 123123,
+        "sex":"man"
       }
     },
     "response": {
@@ -108,25 +69,8 @@
   },
 
 
-
-
-
   {
-    "description":"没有参数返回json的get请求",
-    "request":{
-      "uri":"/getwithoutparam",
-      "method":"get"
-    },
-    "response":{
-      "json": {
-        "name": "zhangsan",
-        "oderId": "OT123"
-      }
-    }
-  },
-
-  {
-    "description": "返回的json存在嵌套",
+    "description": "返回的json存在嵌套--备用的接口",
     "request": {
       "uri": "/more_json",
       "method": "get"

@@ -761,3 +761,20 @@
 2021-03-06 23:09:18,034 - status: - INFO - 200
 2021-03-06 23:09:18,034 - response: - INFO - {"msg":"success","status":"1"}
 2021-03-06 23:09:18,034 - response_time: - INFO - 0.005427
+2021-03-07 15:39:22,407 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-07 15:39:22,407 - method: - INFO - get
+2021-03-07 15:39:22,407 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-07 15:39:22,408 - req_data: - INFO - None
+2021-03-07 15:39:22,408 - status: - INFO - 200
+2021-03-07 15:39:22,409 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-07 15:39:22,409 - response_time: - INFO - 0.021616
+2021-03-07 15:40:10,576 - UrlForWrite: - INFO - http://localhost:8773/post/with/json
+2021-03-07 15:40:10,577 - method: - INFO - post
+2021-03-07 15:40:10,577 - header: - INFO - None
+2021-03-07 15:40:10,578 - req_data: - INFO - {
+"userName": "zhangsan",
+"password": "qq123123"
+}
+2021-03-07 15:40:10,578 - status: - INFO - 200
+2021-03-07 15:40:10,579 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-07 15:40:10,579 - response_time: - INFO - 0.030849

@@ -30,9 +30,14 @@ class OperationExcel:
         lines = self.SheetValue
         return lines.nrows
 
-    # 获取某一个单元格的内容
+    # 获取某一个单元格的内容(返回的是字符串)
     def getCellValue(self, row, col):
         return self.SheetValue.cell_value(row, col)
+
+    # 获取某一个单元格的内容(返回的json)
+    def getCellValueToJsoon(self, row, col):
+        a = self.SheetValue.cell_value(row, col)
+        a
 
     # 获取实际结果单元格的数据,并写进去
     def geteCellValue(self, row, col, value):
@@ -79,4 +84,6 @@ if __name__ == '__main__':
     print(opers.getLines())
 
     # 测试get_cell_value
-    print(opers.getCellValue(0,0))
+    data_value =opers.getCellValue(1,10)
+    print(type(data_value))
+    print(data_value)
