@@ -1,8 +1,6 @@
 # coding:utf-8
 import json
 
-import simplejson as simplejson
-
 
 class CommonUtil:
 	def is_contain(self, expectValue, resultValue):
@@ -19,7 +17,27 @@ class CommonUtil:
 			flag = False
 		return flag
 
-	#
+	# 预期结果校验
+	def assert_dict(self, expected, result):
+		"""
+		需要传递预期结果和实际结果的字典值，
+		判断之后会返回True或者false
+		"""
+		flag = None
+		for key in expected:
+			if (key in result):
+				if result[key] == expected[key]:
+					flag = True
+				elif expected[key] == 'bm_exist()':
+					flag = True
+				else:
+					flag = False
+					break
+			else:
+				print('响应结果中无该字段,请检查！')
+		return flag
+
+
 	# def is_equal_dict(self,dict_one,dict_two):
 	# 	'''
 	# 	判断两个字典是否相等
@@ -37,3 +55,18 @@ if __name__ == '__main__':
 	resultValue='"oderId":"OT123"'
 	expectValue='{"name": "zhangsan", "oderId": "OT123"}'
 	print(cu.is_contain(expectValue,resultValue))
+
+	# 预期结果
+	expected = {'username': 'kaishui',
+				"token": "bm_exist()"}
+	# 实际结果
+	result = {
+		'code': 1,
+		'username': 'kaishui',
+		'token': 'ihbedvbwejhvkjvberkjvbkjgkesjvbbje'
+	}
+	res = cu.assert_dict(expected, result)
+	if res:
+		print("测试通过")
+	else:
+		print("测试不通过")

@@ -10,7 +10,7 @@ header_log = Logger('header:').get_logger()
 data_log = Logger('req_data:').get_logger()
 status_log = Logger('status:').get_logger()
 res_log = Logger("response:").get_logger()
-response_time_log = Logger("response_time:").get_logger()
+
 
 class RunMethod:
     """
@@ -20,13 +20,12 @@ class RunMethod:
     def post_main(self, url, data, header=None):
         res = None
         """
-        进行处理一下先把data的str类型变成json
+        进行数据处理：将data的str类型变成dict(json)
         """
         if data != None:
             data = json.loads(data)
 
         if header != None:
-            #url,data,json
             res = requests.post(url=url, json=data, headers=header)
         else:
             res = requests.post(url=url, json=data)
@@ -55,7 +54,7 @@ class RunMethod:
         data_log.info(data)
         status_log.info(res.status_code)  # 输出请求状态码
         res_log.info(res.text)
-        response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
+
 
         return res
 

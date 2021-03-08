@@ -68,6 +68,23 @@
     }
   },
 
+  {
+  "description": "登陆接口获取token---勿动",
+  "request": {
+    "uri": "/login",
+    "method": "post",
+    "json": {
+      "userName": "zhangsan",
+      "password": 123123
+    }
+  },
+  "response": {
+    "json": {
+      "msg": "success",
+      "token": "ABC123"
+    }
+  }
+},
 
   {
     "description": "返回的json存在嵌套--备用的接口",

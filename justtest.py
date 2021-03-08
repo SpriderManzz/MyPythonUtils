@@ -26,45 +26,36 @@ headers = {
 # verify 是否校验证书
 # stream 如果为False，则响应内容将直接全部下载
 # cert 客户端证书地址
-
-
-# # get只携带url
-# get1 = requests.get('http://localhost:8882/getCookies')
-# print(get1.text)
-#
-# # get携带url和headers
-# get2 = requests.get('http://localhost:8882/getCookies', headers=headers)
-#
-# print(get2.text)
-
-
-# get有参数，使用params
-# data = {'key': 'value'}
-# get3 = requests.get('http://localhost:8882/get/with/param/1/2', params=data)
-# print(get3.text)
-
-
-# post有参数，使用data
-# r = requests.post('https://httpbin.org/post', data = {'key':'value'})
-import requests
-
-dic = {'a': 1, 'b': 2, 'c': 3}
-js = json.dumps(dic, sort_keys=True, indent=4, separators=(',', ':'))
-print(js)
-
-print("-------------------格式json----------------------------")
-
-dict = {
-    "userName": "zhangsan",
-    "password": 123123,
-    "sex": "man"
+# 预期结果
+expected = {'username': 'kaishui',
+            "token": "bm_exist()"}
+# 实际结果
+result = {
+    'code': 1,
+    'username': 'kaishui',
+    'token': 'ihbedvbwejhvkjvberkjvbkjgkesjvbbje'
 }
-print(type(dict))
-
-r = requests.post('http://localhost:8773/post/with/json', data=dict)
-
-print(r.status_code)
-print(type(r.json()))
 
 
-#print(type(b.json()))
+def assert_dict(expected,result):
+    flag = None
+    for key in expected:
+        if (key in result):
+            if result[key] == expected[key]:
+                flag = True
+            elif expected[key] == "bm_exist()":
+                flag = True
+            else:
+                flag = False
+                break
+        else:
+            print('响应结果无该字段,请检查')
+    return flag
+
+res = assert_dict(expected, result)
+if res:
+    print("测试通过")
+else:
+    print("测试不通过")
+
+

@@ -6,6 +6,10 @@ from data.get_data import GetData
 from utils.common_util import CommonUtil
 from utils.send_email import SendEmail
 from data.config_data import isemail
+from utils.log import Logger
+
+response_time_log = Logger("response_time:").get_logger()
+expect_log = Logger('expect:').get_logger()
 
 
 
@@ -16,8 +20,8 @@ class RunTest:
         self.comUtil = CommonUtil()
         self.senEmail = SendEmail()
 
-    # 程序执行
-    def goOnRun(self):
+    # 程序执行入口
+    def go_on_run(self):
         res = None
         passCount = []  # 定义成功个数，用列表，然后调用append方法即可累加，然后len()出长度
         failedCount = []
@@ -30,12 +34,13 @@ class RunTest:
                     url = self.data.getUrlValue(row)
                     method = self.data.getRequestMethodValue(row)
                     run = self.data.getRunValue(row)
-                    data = self.data.getDataValue(row)  # 此时的data已处理空格和换行符
-                    header = self.data.getHeaderValue(row) # 此时已经是dict
-                    expect = self.data.getExpectValue(row)
+                    data = self.data.getDataValue(row)  # 此时的data为str但已处理空格和换行符
+                    header = self.data.getHeaderValue(row)  # 此时已经是dict
+                    expect = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
                     if run:
                         res = self.runMethod.run_main(method, url, data, header)
-                        if self.comUtil.is_contain(expect, res.json()):
+                        # 进行预期结果和实际结果的判断
+                        if self.comUtil.assert_dict(expect, res.json()):
                             self.data.writeResultValue(row, 'pass')
                             passCount.append(row)
                         else:
@@ -43,6 +48,8 @@ class RunTest:
                             failedCount.append(row)
             except Exception as e:
                 print("something error ", e)
+            expect_log.info(expect)
+            response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
         if isemail:
             self.senEmail.send_main(passCount, failedCount)
 
@@ -51,7 +58,7 @@ class RunTest:
 
 if __name__ == '__main__':
     run = RunTest()
-    run.goOnRun()
+    run.go_on_run()
 
 
 

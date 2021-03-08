@@ -52,20 +52,24 @@ class GetData:
     # 获取请求数据
     def getDataValue(self, row):
         data = self.opera_excel.getCellValue(row, requestDataLine).replace(" ", "").replace('\n', '')
+        # 此时这个data是str(并未转成字典)
         if data == '':
             return None
         return data
 
     # 获取预期结果
     def getExpectValue(self, row):
-        #col = int(data_config.getExpectLine())
-        expect = self.opera_excel.getCellValue(row, expectDataLine)
+        """
+        因为在测试用例一般都是双引号的，所以目前采用json.loads()来处理
+        """
+        expect = self.opera_excel.getCellValue(row, expectDataLine).replace(" ", "").replace('\n', '')
+        expect = json.loads(expect)# 字符串形式的数据转化为字典,但是字典是单引号
+        #eval(expect)
         if expect == '':
             return None
         return expect
 
     def writeResultValue(self,row,vaule):
-        #col = int(data_config.getResultLine())
         self.opera_excel.geteCellValue(row, resultDataLine, vaule)
 
 
