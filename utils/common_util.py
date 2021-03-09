@@ -1,5 +1,7 @@
 # coding:utf-8
 import json
+import random
+from random import randint
 
 
 class CommonUtil:
@@ -37,6 +39,20 @@ class CommonUtil:
 				print('响应结果中无该字段,请检查！')
 		return flag
 
+	# 生成指定长度随机整数
+	def bm_get_int(self, n):
+		range_start = 10 ** (n - 1)
+		range_end = (10 ** n) - 1
+		return randint(range_start, range_end)
+
+	# 生成指定长度的随机字符串
+	def bm_get_str(self, randomlength):
+		random_str = ''
+		base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
+		length = len(base_str) - 1
+		for i in range(randomlength):
+			random_str += base_str[random.randint(0, length)]
+		return random_str
 
 	# def is_equal_dict(self,dict_one,dict_two):
 	# 	'''
@@ -52,9 +68,9 @@ class CommonUtil:
 
 if __name__ == '__main__':
 	cu = CommonUtil()
-	resultValue='"oderId":"OT123"'
-	expectValue='{"name": "zhangsan", "oderId": "OT123"}'
-	print(cu.is_contain(expectValue,resultValue))
+	resultValue = '"oderId":"OT123"'
+	expectValue = '{"name": "zhangsan", "oderId": "OT123"}'
+	print(cu.is_contain(expectValue, resultValue))
 
 	# 预期结果
 	expected = {'username': 'kaishui',

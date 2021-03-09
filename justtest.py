@@ -1,6 +1,9 @@
 # coding:utf-8
 import requests
 import json
+import random
+from random import randint
+import re
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
@@ -27,35 +30,71 @@ headers = {
 # stream 如果为False，则响应内容将直接全部下载
 # cert 客户端证书地址
 # 预期结果
-expected = {'username': 'kaishui',
-            "token": "bm_exist()"}
-# 实际结果
-result = {
-    'code': 1,
-    'username': 'kaishui',
-    'token': 'ihbedvbwejhvkjvberkjvbkjgkesjvbbje'
-}
 
 
-def assert_dict(expected,result):
-    flag = None
-    for key in expected:
-        if (key in result):
-            if result[key] == expected[key]:
-                flag = True
-            elif expected[key] == "bm_exist()":
-                flag = True
-            else:
-                flag = False
-                break
-        else:
-            print('响应结果无该字段,请检查')
-    return flag
 
-res = assert_dict(expected, result)
-if res:
-    print("测试通过")
-else:
-    print("测试不通过")
+
+def bm_get_int(n):
+    """
+    :param n: 指定长度随机数字
+    :return:
+    """
+    range_start = 10**(n-1)
+    range_end = (10**n)-1
+    return randint(range_start, range_end)
+
+
+def bm_get_str(randomlength):
+    """
+    生成一个指定长度的随机字符串
+    """
+    random_str = ''
+    base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
+    length = len(base_str) - 1
+    for i in range(randomlength):
+        random_str += base_str[random.randint(0, length)]
+    return random_str
+print(bm_get_str(34))
+
+
+
+"""
+思路：循环读取每一个list元素，然后判断前面3个元素是否为'bm_'
+"""
+
+
+# for l in list:
+#     print(l)
+#     if (l.find('bm_', 0, -1)) != -1:
+#         print(l[0:3])
+
+#print(list[0:3])
+
+list = ['bm_get_int()', 'bm_get_str()']
+dict = {
+        "userName": "bm_get_str(5)",
+        "password": 123456,
+        "age": "bm_get_int(3)",
+        "type": "http"
+       }
+for key in dict.keys():  # 在dict的字典里遍历每个key
+    if isinstance(dict[key], str):  # 判断每个key对应的value是否为str
+        if 'bm_' in dict[key]:
+            number = int(re.sub('\D', '', dict[key]))  # 获取目标字符的数字
+            method = dict[key].split('(')[0] + "()"    # 完整方法名拼接
+            if method == 'bm_get_int()':
+                dict[key] = bm_get_int(number)
+            elif method == 'bm_get_str()':
+                dict[key] = bm_get_str(number)
+print("调用方法修改后的dict："+str(dict))
+
+
+
+
+
+
+
+req = requests.post('http://localhost:8882/ReturnYourJson', json=dict)
+print(req.json())
 
 

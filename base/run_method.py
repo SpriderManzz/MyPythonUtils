@@ -22,8 +22,7 @@ class RunMethod:
         """
         进行数据处理：将data的str类型变成dict(json)
         """
-        if data != None:
-            data = json.loads(data)
+
 
         if header != None:
             res = requests.post(url=url, json=data, headers=header)

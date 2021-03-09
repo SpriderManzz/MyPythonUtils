@@ -1,6 +1,11 @@
 #coding:utf-8
+import re
 import json
+import random
+from random import randint
 from data.config_data import *
+from utils.common_util import CommonUtil
+
 
 # 循环的时候可以获取行号，然后列的话可以调用data_config
 from utils.opera_excel import OperationExcel
@@ -10,6 +15,7 @@ from utils.opera_excel import OperationExcel
 
 class GetData:
     def __init__(self):
+        self.commonUtil = CommonUtil()
         self.opera_excel = OperationExcel()
 
     '''
@@ -23,13 +29,15 @@ class GetData:
     def getRunValue(self, row):
         flag = None
         runValue = self.opera_excel.getCellValue(row, isRunLine)
+        if runValue == 'y':
+            runValue = runValue.upper()
         if runValue == 'Y':
             flag = True
         else:
             flag = False
         return flag
 
-    # 获取请求类型
+    # 获取请求类型值
     def getRequestMethodValue(self, row):
         request_method = self.opera_excel.getCellValue(row, requestMethodLine)
         return request_method
@@ -52,8 +60,18 @@ class GetData:
     # 获取请求数据
     def getDataValue(self, row):
         data = self.opera_excel.getCellValue(row, requestDataLine).replace(" ", "").replace('\n', '')
-        # 此时这个data是str(并未转成字典)
-        if data == '':
+        if data != '':
+            data = json.loads(data)
+            for key in data.keys():  # 在dict的字典里遍历每个key
+                if isinstance(data[key], str):  # 判断每个key对应的value是否为str
+                    if 'bm_' in data[key]:
+                        number = int(re.sub('\D', '', data[key]))  # 获取目标字符的数字
+                        method = data[key].split('(')[0] + "()"  # 完整方法名拼接
+                        if method == 'bm_get_int()':
+                            data[key] = self.commonUtil.bm_get_int(number)
+                        elif method == 'bm_get_str()':
+                            data[key] = self.commonUtil.bm_get_str(number)
+        else:
             return None
         return data
 
@@ -69,7 +87,8 @@ class GetData:
             return None
         return expect
 
-    def writeResultValue(self,row,vaule):
+    # 写入数据到实际结果列
+    def writeResultValue(self, row, vaule):
         self.opera_excel.geteCellValue(row, resultDataLine, vaule)
 
 

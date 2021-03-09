@@ -25,36 +25,40 @@ class RunTest:
         res = None
         passCount = []  # 定义成功个数，用列表，然后调用append方法即可累加，然后len()出长度
         failedCount = []
+        ignoreCount=[]
         rowsCount = self.data.getCaseLines()  # rowsCount整型，Excel的行数
         for row in range(1, rowsCount):  # 从第二行开始
-            print(row)
+            print("正在执行第"+str(row)+"个接口")
             try:
                 runValue = self.data.getRunValue(row)
                 if runValue:
                     url = self.data.getUrlValue(row)
                     method = self.data.getRequestMethodValue(row)
-                    run = self.data.getRunValue(row)
-                    data = self.data.getDataValue(row)  # 此时的data为str但已处理空格和换行符
+                    data = self.data.getDataValue(row)  # 此时的data为dict且已处理空格和换行符
                     header = self.data.getHeaderValue(row)  # 此时已经是dict
-                    expect = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
-                    if run:
-                        res = self.runMethod.run_main(method, url, data, header)
-                        # 进行预期结果和实际结果的判断
-                        if self.comUtil.assert_dict(expect, res.json()):
-                            self.data.writeResultValue(row, 'pass')
-                            passCount.append(row)
-                        else:
-                            self.data.writeResultValue(row, res.text)  # 错误的信息写进去
-                            failedCount.append(row)
+
+                    expected = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
+                    res = self.runMethod.run_main(method, url, data, header)
+                    # 进行预期结果和实际结果的判断
+                    if self.comUtil.assert_dict(expected, res.json()):
+                        self.data.writeResultValue(row, 'pass')
+                        passCount.append(row)
+                    else:
+                        self.data.writeResultValue(row, res.text)  # 错误的信息写进去
+                        failedCount.append(row)
+                else:
+                    ignoreCount.append(row)
             except Exception as e:
                 print("something error ", e)
-            expect_log.info(expect)
+            expect_log.info(expected)
             response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
         if isemail:
             self.senEmail.send_main(passCount, failedCount)
 
         print("成功用例数为：" + str(len(passCount)))
         print("失败用例数为：" + str(len(failedCount)))
+        print("忽略用例数为：" + str(len(ignoreCount)))
+
 
 if __name__ == '__main__':
     run = RunTest()

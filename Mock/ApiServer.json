@@ -7,6 +7,11 @@
       "headers": {
         "Content-Type": "application/json",
         "Authorization": "Bearer aa11"
+      },
+      "json": {
+        "userName": "zhangsan",
+        "password": 123123,
+        "sex":"man"
       }
     },
     "response": {

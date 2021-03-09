@@ -1,230 +1,76 @@
-2021-03-08 23:17:13,336 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
-2021-03-08 23:17:13,336 - method: - INFO - get
-2021-03-08 23:17:13,336 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:17:13,337 - req_data: - INFO - None
-2021-03-08 23:17:13,337 - status: - INFO - 200
-2021-03-08 23:17:13,337 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,343 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:13,344 - response_time: - INFO - 0.012972
-2021-03-08 23:17:13,353 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
-2021-03-08 23:17:13,354 - method: - INFO - post
-2021-03-08 23:17:13,354 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:17:13,354 - req_data: - INFO - None
-2021-03-08 23:17:13,354 - status: - INFO - 200
-2021-03-08 23:17:13,354 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,359 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:13,359 - response_time: - INFO - 0.007063
-2021-03-08 23:17:13,368 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:17:13,368 - method: - INFO - get
-2021-03-08 23:17:13,368 - header: - INFO - None
-2021-03-08 23:17:13,368 - req_data: - INFO - None
-2021-03-08 23:17:13,368 - status: - INFO - 200
-2021-03-08 23:17:13,368 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,375 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:13,375 - response_time: - INFO - 0.006432
-2021-03-08 23:17:13,384 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:17:13,384 - method: - INFO - post
-2021-03-08 23:17:13,384 - header: - INFO - None
-2021-03-08 23:17:13,384 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:17:13,384 - status: - INFO - 200
-2021-03-08 23:17:13,384 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,393 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:13,393 - response_time: - INFO - 0.005918
-2021-03-08 23:17:13,401 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:17:13,401 - method: - INFO - get
-2021-03-08 23:17:13,401 - header: - INFO - None
-2021-03-08 23:17:13,401 - req_data: - INFO - None
-2021-03-08 23:17:13,401 - status: - INFO - 200
-2021-03-08 23:17:13,401 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,407 - expect: - INFO - {'msg': 'success11'}
-2021-03-08 23:17:13,407 - response_time: - INFO - 0.005696
-2021-03-08 23:17:13,417 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:17:13,417 - method: - INFO - post
-2021-03-08 23:17:13,417 - header: - INFO - None
-2021-03-08 23:17:13,418 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:17:13,418 - status: - INFO - 200
-2021-03-08 23:17:13,418 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:13,426 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:17:13,426 - response_time: - INFO - 0.007719
-2021-03-08 23:17:13,426 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:17:13,426 - response_time: - INFO - 0.007719
-2021-03-08 23:17:13,434 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:13,434 - method: - INFO - post
-2021-03-08 23:17:13,434 - header: - INFO - None
-2021-03-08 23:17:13,435 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:13,435 - status: - INFO - 200
-2021-03-08 23:17:13,435 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:13,440 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:13,440 - response_time: - INFO - 0.006541
-2021-03-08 23:17:13,449 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:13,449 - method: - INFO - post
-2021-03-08 23:17:13,449 - header: - INFO - None
-2021-03-08 23:17:13,450 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:13,450 - status: - INFO - 200
-2021-03-08 23:17:13,450 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:13,458 - expect: - INFO - {'msg': 'success', 'token': 'ABC123'}
-2021-03-08 23:17:13,459 - response_time: - INFO - 0.007418
-2021-03-08 23:17:13,479 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:13,479 - method: - INFO - post
-2021-03-08 23:17:13,479 - header: - INFO - None
-2021-03-08 23:17:13,479 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:13,479 - status: - INFO - 200
-2021-03-08 23:17:13,479 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:13,487 - expect: - INFO - {'msg': 'success', 'token': 'bm_exist()'}
-2021-03-08 23:17:13,487 - response_time: - INFO - 0.009322
-2021-03-08 23:17:58,036 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
-2021-03-08 23:17:58,036 - method: - INFO - get
-2021-03-08 23:17:58,037 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:17:58,037 - req_data: - INFO - None
-2021-03-08 23:17:58,037 - status: - INFO - 200
-2021-03-08 23:17:58,038 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,048 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:58,048 - response_time: - INFO - 0.014239
-2021-03-08 23:17:58,057 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
-2021-03-08 23:17:58,057 - method: - INFO - post
-2021-03-08 23:17:58,057 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:17:58,057 - req_data: - INFO - None
-2021-03-08 23:17:58,057 - status: - INFO - 200
-2021-03-08 23:17:58,058 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,063 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:58,063 - response_time: - INFO - 0.00627
-2021-03-08 23:17:58,072 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:17:58,073 - method: - INFO - get
-2021-03-08 23:17:58,073 - header: - INFO - None
-2021-03-08 23:17:58,073 - req_data: - INFO - None
-2021-03-08 23:17:58,073 - status: - INFO - 200
-2021-03-08 23:17:58,073 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,080 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:58,080 - response_time: - INFO - 0.007027
-2021-03-08 23:17:58,095 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:17:58,095 - method: - INFO - post
-2021-03-08 23:17:58,095 - header: - INFO - None
-2021-03-08 23:17:58,095 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:17:58,095 - status: - INFO - 200
-2021-03-08 23:17:58,095 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,102 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:58,102 - response_time: - INFO - 0.012525
-2021-03-08 23:17:58,110 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:17:58,110 - method: - INFO - get
-2021-03-08 23:17:58,110 - header: - INFO - None
-2021-03-08 23:17:58,110 - req_data: - INFO - None
-2021-03-08 23:17:58,110 - status: - INFO - 200
-2021-03-08 23:17:58,111 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,118 - expect: - INFO - {'msg': 'success11'}
-2021-03-08 23:17:58,118 - response_time: - INFO - 0.006001
-2021-03-08 23:17:58,133 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:17:58,133 - method: - INFO - post
-2021-03-08 23:17:58,133 - header: - INFO - None
-2021-03-08 23:17:58,133 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:17:58,133 - status: - INFO - 200
-2021-03-08 23:17:58,133 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:17:58,142 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:17:58,142 - response_time: - INFO - 0.012737
-2021-03-08 23:17:58,143 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:17:58,143 - response_time: - INFO - 0.012737
-2021-03-08 23:17:58,155 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:58,155 - method: - INFO - post
-2021-03-08 23:17:58,155 - header: - INFO - None
-2021-03-08 23:17:58,156 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:58,156 - status: - INFO - 200
-2021-03-08 23:17:58,156 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:58,164 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:17:58,164 - response_time: - INFO - 0.009528
-2021-03-08 23:17:58,175 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:58,175 - method: - INFO - post
-2021-03-08 23:17:58,175 - header: - INFO - None
-2021-03-08 23:17:58,175 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:58,175 - status: - INFO - 200
-2021-03-08 23:17:58,176 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:58,185 - expect: - INFO - {'msg': 'success', 'token': 'ABC123'}
-2021-03-08 23:17:58,185 - response_time: - INFO - 0.008525
-2021-03-08 23:17:58,196 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:17:58,196 - method: - INFO - post
-2021-03-08 23:17:58,197 - header: - INFO - None
-2021-03-08 23:17:58,197 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:17:58,197 - status: - INFO - 200
-2021-03-08 23:17:58,197 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:17:58,204 - expect: - INFO - {'msg': 'success', 'token': 'bm_exist()'}
-2021-03-08 23:17:58,204 - response_time: - INFO - 0.006992
-2021-03-08 23:18:00,819 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
-2021-03-08 23:18:00,820 - method: - INFO - get
-2021-03-08 23:18:00,821 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:18:00,821 - req_data: - INFO - None
-2021-03-08 23:18:00,821 - status: - INFO - 200
-2021-03-08 23:18:00,822 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,830 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:18:00,831 - response_time: - INFO - 0.015648
-2021-03-08 23:18:00,839 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
-2021-03-08 23:18:00,840 - method: - INFO - post
-2021-03-08 23:18:00,840 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:18:00,840 - req_data: - INFO - None
-2021-03-08 23:18:00,840 - status: - INFO - 200
-2021-03-08 23:18:00,840 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,850 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:18:00,851 - response_time: - INFO - 0.006828
-2021-03-08 23:18:00,861 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:18:00,861 - method: - INFO - get
-2021-03-08 23:18:00,862 - header: - INFO - None
-2021-03-08 23:18:00,862 - req_data: - INFO - None
-2021-03-08 23:18:00,862 - status: - INFO - 200
-2021-03-08 23:18:00,862 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,870 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:18:00,870 - response_time: - INFO - 0.007583
-2021-03-08 23:18:00,881 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:18:00,881 - method: - INFO - post
-2021-03-08 23:18:00,881 - header: - INFO - None
-2021-03-08 23:18:00,881 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:18:00,881 - status: - INFO - 200
-2021-03-08 23:18:00,882 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,890 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:18:00,890 - response_time: - INFO - 0.009081
-2021-03-08 23:18:00,901 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
-2021-03-08 23:18:00,901 - method: - INFO - get
-2021-03-08 23:18:00,901 - header: - INFO - None
-2021-03-08 23:18:00,901 - req_data: - INFO - None
-2021-03-08 23:18:00,901 - status: - INFO - 200
-2021-03-08 23:18:00,902 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,910 - expect: - INFO - {'msg': 'success11'}
-2021-03-08 23:18:00,911 - response_time: - INFO - 0.007725
-2021-03-08 23:18:00,926 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
-2021-03-08 23:18:00,926 - method: - INFO - post
-2021-03-08 23:18:00,926 - header: - INFO - None
-2021-03-08 23:18:00,926 - req_data: - INFO - {"userName":"zhangsan","password":123123,"sex":"man"}
-2021-03-08 23:18:00,926 - status: - INFO - 200
-2021-03-08 23:18:00,926 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:18:00,938 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:18:00,938 - response_time: - INFO - 0.012441
-2021-03-08 23:18:00,938 - expect: - INFO - {'msg': 'success22'}
-2021-03-08 23:18:00,938 - response_time: - INFO - 0.012441
-2021-03-08 23:18:00,964 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:18:00,965 - method: - INFO - post
-2021-03-08 23:18:00,965 - header: - INFO - None
-2021-03-08 23:18:00,965 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:18:00,965 - status: - INFO - 200
-2021-03-08 23:18:00,965 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:18:00,974 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:18:00,974 - response_time: - INFO - 0.016641
-2021-03-08 23:18:00,984 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:18:00,985 - method: - INFO - post
-2021-03-08 23:18:00,985 - header: - INFO - None
-2021-03-08 23:18:00,985 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:18:00,985 - status: - INFO - 200
-2021-03-08 23:18:00,985 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:18:00,992 - expect: - INFO - {'msg': 'success', 'token': 'ABC123'}
-2021-03-08 23:18:00,992 - response_time: - INFO - 0.007378
-2021-03-08 23:18:01,000 - UrlForWrite: - INFO - http://localhost:8773/login
-2021-03-08 23:18:01,000 - method: - INFO - post
-2021-03-08 23:18:01,000 - header: - INFO - None
-2021-03-08 23:18:01,000 - req_data: - INFO - {"userName":"zhangsan","password":123123}
-2021-03-08 23:18:01,000 - status: - INFO - 200
-2021-03-08 23:18:01,000 - response: - INFO - {"msg":"success","token":"ABC123"}
-2021-03-08 23:18:01,006 - expect: - INFO - {'msg': 'success', 'token': 'bm_exist()'}
-2021-03-08 23:18:01,007 - response_time: - INFO - 0.005498
-2021-03-08 23:20:39,990 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
-2021-03-08 23:20:39,990 - method: - INFO - get
-2021-03-08 23:20:39,991 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
-2021-03-08 23:20:39,991 - req_data: - INFO - None
-2021-03-08 23:20:39,992 - status: - INFO - 200
-2021-03-08 23:20:39,993 - response: - INFO - {"msg":"success","status":"1"}
-2021-03-08 23:20:40,219 - expect: - INFO - {'msg': 'success'}
-2021-03-08 23:20:40,220 - response_time: - INFO - 0.015337
+2021-03-09 13:43:52,956 - UrlForWrite: - INFO - http://localhost:8773/get/with/headers1
+2021-03-09 13:43:52,957 - method: - INFO - get
+2021-03-09 13:43:52,957 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-09 13:43:52,957 - req_data: - INFO - None
+2021-03-09 13:43:52,958 - status: - INFO - 200
+2021-03-09 13:43:52,958 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:52,966 - expect: - INFO - {'msg': 'success'}
+2021-03-09 13:43:52,966 - response_time: - INFO - 0.012889
+2021-03-09 13:43:52,975 - UrlForWrite: - INFO - http://localhost:8773/post/with/headers1
+2021-03-09 13:43:52,976 - method: - INFO - post
+2021-03-09 13:43:52,976 - header: - INFO - {'Content-Type': 'application/json', 'Authorization': 'Bearer aa11'}
+2021-03-09 13:43:52,976 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123, 'sex': 'man'}
+2021-03-09 13:43:52,976 - status: - INFO - 200
+2021-03-09 13:43:52,976 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:52,982 - expect: - INFO - {'msg': 'success'}
+2021-03-09 13:43:52,982 - response_time: - INFO - 0.006269
+2021-03-09 13:43:52,992 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-09 13:43:52,992 - method: - INFO - get
+2021-03-09 13:43:52,992 - header: - INFO - None
+2021-03-09 13:43:52,992 - req_data: - INFO - None
+2021-03-09 13:43:52,992 - status: - INFO - 200
+2021-03-09 13:43:52,992 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:53,002 - expect: - INFO - {'msg': 'success'}
+2021-03-09 13:43:53,002 - response_time: - INFO - 0.007167
+2021-03-09 13:43:53,012 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-09 13:43:53,013 - method: - INFO - post
+2021-03-09 13:43:53,013 - header: - INFO - None
+2021-03-09 13:43:53,013 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123, 'sex': 'man'}
+2021-03-09 13:43:53,013 - status: - INFO - 200
+2021-03-09 13:43:53,013 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:53,021 - expect: - INFO - {'msg': 'success'}
+2021-03-09 13:43:53,022 - response_time: - INFO - 0.007376
+2021-03-09 13:43:53,030 - UrlForWrite: - INFO - http://localhost:8773/get/without/headers1
+2021-03-09 13:43:53,030 - method: - INFO - get
+2021-03-09 13:43:53,030 - header: - INFO - None
+2021-03-09 13:43:53,030 - req_data: - INFO - None
+2021-03-09 13:43:53,031 - status: - INFO - 200
+2021-03-09 13:43:53,031 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:53,038 - expect: - INFO - {'msg': 'success11'}
+2021-03-09 13:43:53,038 - response_time: - INFO - 0.005993
+2021-03-09 13:43:53,048 - UrlForWrite: - INFO - http://localhost:8773/post/without/headers1
+2021-03-09 13:43:53,048 - method: - INFO - post
+2021-03-09 13:43:53,048 - header: - INFO - None
+2021-03-09 13:43:53,048 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123, 'sex': 'man'}
+2021-03-09 13:43:53,049 - status: - INFO - 200
+2021-03-09 13:43:53,049 - response: - INFO - {"msg":"success","status":"1"}
+2021-03-09 13:43:53,057 - expect: - INFO - {'msg': 'success22'}
+2021-03-09 13:43:53,057 - response_time: - INFO - 0.007381
+2021-03-09 13:43:53,057 - expect: - INFO - {'msg': 'success22'}
+2021-03-09 13:43:53,057 - response_time: - INFO - 0.007381
+2021-03-09 13:43:53,067 - UrlForWrite: - INFO - http://localhost:8773/login
+2021-03-09 13:43:53,067 - method: - INFO - post
+2021-03-09 13:43:53,068 - header: - INFO - None
+2021-03-09 13:43:53,068 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123}
+2021-03-09 13:43:53,068 - status: - INFO - 200
+2021-03-09 13:43:53,068 - response: - INFO - {"msg":"success","token":"ABC123"}
+2021-03-09 13:43:53,076 - expect: - INFO - {'msg': 'success'}
+2021-03-09 13:43:53,076 - response_time: - INFO - 0.007609
+2021-03-09 13:43:53,087 - UrlForWrite: - INFO - http://localhost:8773/login
+2021-03-09 13:43:53,087 - method: - INFO - post
+2021-03-09 13:43:53,087 - header: - INFO - None
+2021-03-09 13:43:53,087 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123}
+2021-03-09 13:43:53,087 - status: - INFO - 200
+2021-03-09 13:43:53,087 - response: - INFO - {"msg":"success","token":"ABC123"}
+2021-03-09 13:43:53,092 - expect: - INFO - {'msg': 'success', 'token': 'ABC123'}
+2021-03-09 13:43:53,093 - response_time: - INFO - 0.007512
+2021-03-09 13:43:53,106 - UrlForWrite: - INFO - http://localhost:8773/login
+2021-03-09 13:43:53,106 - method: - INFO - post
+2021-03-09 13:43:53,106 - header: - INFO - None
+2021-03-09 13:43:53,106 - req_data: - INFO - {'userName': 'zhangsan', 'password': 123123}
+2021-03-09 13:43:53,106 - status: - INFO - 200
+2021-03-09 13:43:53,106 - response: - INFO - {"msg":"success","token":"ABC123"}
+2021-03-09 13:43:53,117 - expect: - INFO - {'msg': 'success', 'token': 'bm_exist()'}
+2021-03-09 13:43:53,117 - response_time: - INFO - 0.010055
+2021-03-09 13:43:53,117 - expect: - INFO - {'msg': 'success', 'token': 'bm_exist()'}
+2021-03-09 13:43:53,117 - response_time: - INFO - 0.010055
