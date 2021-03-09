@@ -53,8 +53,6 @@ class RunMethod:
         data_log.info(data)
         status_log.info(res.status_code)  # 输出请求状态码
         res_log.info(res.text)
-
-
         return res
 
 

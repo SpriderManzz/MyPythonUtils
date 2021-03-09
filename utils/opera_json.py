@@ -20,7 +20,7 @@ class OperationJson:
             return data
 
     # 根据关键字读取数据
-    def get_data(self,id):
+    def get_data(self, id):
         return self.data[id]
 
 

@@ -1,6 +1,6 @@
 # coding:utf-8
 import sys
-sys.path.append("F:\MyPythonUtils")# 手动加入项目路径
+sys.path.append("F:\MyPythonUtils")  # 手动加入项目路径
 from base.run_method import RunMethod
 from data.get_data import GetData
 from utils.common_util import CommonUtil
@@ -10,7 +10,6 @@ from utils.log import Logger
 
 response_time_log = Logger("response_time:").get_logger()
 expect_log = Logger('expect:').get_logger()
-
 
 
 class RunTest:
@@ -30,13 +29,11 @@ class RunTest:
         for row in range(1, rowsCount):  # 从第二行开始
             print("正在执行第"+str(row)+"个接口")
             try:
-                runValue = self.data.getRunValue(row)
-                if runValue:
+                if self.data.getRunValue(row):
                     url = self.data.getUrlValue(row)
                     method = self.data.getRequestMethodValue(row)
                     data = self.data.getDataValue(row)  # 此时的data为dict且已处理空格和换行符
                     header = self.data.getHeaderValue(row)  # 此时已经是dict
-
                     expected = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
                     res = self.runMethod.run_main(method, url, data, header)
                     # 进行预期结果和实际结果的判断
@@ -54,7 +51,6 @@ class RunTest:
             response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
         if isemail:
             self.senEmail.send_main(passCount, failedCount)
-
         print("成功用例数为：" + str(len(passCount)))
         print("失败用例数为：" + str(len(failedCount)))
         print("忽略用例数为：" + str(len(ignoreCount)))

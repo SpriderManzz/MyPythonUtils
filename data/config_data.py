@@ -37,9 +37,9 @@ db = ReadConfig().get_db('db')
 
 
 # 邮箱相关
-smtpserver =ReadConfig().get_smtpserver('smtpserver')
+smtpserver = ReadConfig().get_smtpserver('smtpserver')
 isemail = ReadConfig().get_is_email('isemail')
 senduser = ReadConfig().get_senduser('senduser')
-password =ReadConfig().get_password('password')
+password = ReadConfig().get_password('password')
 receive_user = ReadConfig().get_receive_user('receive_user')
 receive_user_list = receive_user.strip(',').split(',')  # 字符串转变成list列表
