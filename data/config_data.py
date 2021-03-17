@@ -12,12 +12,13 @@ descLine = ReadConfig().get_desc('desc')
 urlLine = ReadConfig().get_url('url')
 requestMethodLine = ReadConfig().get_requestMethod('requestMethod')
 headerLine = ReadConfig().get_header('header')
-caseDependLine = ReadConfig().get_caseDepend('caseDepend')
-dataDependLine = ReadConfig().get_dataDepend('dataDepend')
-fieldDependLine = ReadConfig().get_fieldDepend('fieldDepend')
+# caseDependLine = ReadConfig().get_caseDepend('caseDepend')
+# dataDependLine = ReadConfig().get_dataDepend('dataDepend')
+# fieldDependLine = ReadConfig().get_fieldDepend('fieldDepend')
 requestDataLine = ReadConfig().get_requestData('requestData')
 expectDataLine = ReadConfig().get_expectData('expectData')
 resultDataLine = ReadConfig().get_resultData('resultData')
+
 
 
 #   HTTP协议相关
@@ -43,3 +44,6 @@ senduser = ReadConfig().get_senduser('senduser')
 password = ReadConfig().get_password('password')
 receive_user = ReadConfig().get_receive_user('receive_user')
 receive_user_list = receive_user.strip(',').split(',')  # 字符串转变成list列表
+
+if __name__ == "__main__":
+    print("isRunLine的列号为："+str(isRunLine))

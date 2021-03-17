@@ -40,29 +40,29 @@ class ReadConfig():
         header = config.getint('EXCEL_LINE_INFO', header)
         return header
 
-    def get_caseDepend(self, caseDepend):
-        caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
-        return caseDepend
-
-    def get_dataDepend(self, dataDepend):
-        dataDepend = config.getint('EXCEL_LINE_INFO', dataDepend)
-        return dataDepend
-
-    def get_fieldDepend(self, fieldDepend):
-        fieldDepend = config.getint('EXCEL_LINE_INFO', fieldDepend)
-        return fieldDepend
+    # def get_caseDepend(self, caseDepend):
+    #     caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
+    #     return caseDepend
+    #
+    # def get_dataDepend(self, dataDepend):
+    #     dataDepend = config.getint('EXCEL_LINE_INFO', dataDepend)
+    #     return dataDepend
+    #
+    # def get_fieldDepend(self, fieldDepend):
+    #     fieldDepend = config.getint('EXCEL_LINE_INFO', fieldDepend)
+    #     return fieldDepend
 
     def get_requestData(self, requestData):
         requestData = config.getint('EXCEL_LINE_INFO', requestData)
         return requestData
 
-    def get_caseDepend(self, caseDepend):
-        caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
-        return caseDepend
-
-    def get_caseDepend(self, caseDepend):
-        caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
-        return caseDepend
+    # def get_caseDepend(self, caseDepend):
+    #     caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
+    #     return caseDepend
+    #
+    # def get_caseDepend(self, caseDepend):
+    #     caseDepend = config.getint('EXCEL_LINE_INFO', caseDepend)
+    #     return caseDepend
 
     def get_expectData(self, expectData):
         expectData = config.getint('EXCEL_LINE_INFO', expectData)

@@ -1,5 +1,6 @@
 # coding:utf-8
 import sys
+import json
 sys.path.append("F:\MyPythonUtils")  # 手动加入项目路径
 from base.run_method import RunMethod
 from data.get_data import GetData
@@ -28,26 +29,26 @@ class RunTest:
         rowsCount = self.data.getCaseLines()  # rowsCount整型，Excel的行数
         for row in range(1, rowsCount):  # 从第二行开始
             print("正在执行第"+str(row)+"个接口")
-            try:
-                if self.data.getRunValue(row):
-                    url = self.data.getUrlValue(row)
-                    method = self.data.getRequestMethodValue(row)
-                    data = self.data.getDataValue(row)  # 此时的data为dict且已处理空格和换行符
-                    header = self.data.getHeaderValue(row)  # 此时已经是dict
-                    expected = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
-                    res = self.runMethod.run_main(method, url, data, header)
-                    # 进行预期结果和实际结果的判断
-                    if self.comUtil.assert_dict(expected, res.json()):
-                        self.data.writeResultValue(row, 'pass')
-                        passCount.append(row)
-                    else:
-                        self.data.writeResultValue(row, res.text)  # 错误的信息写进去
-                        failedCount.append(row)
+            #try:
+            if self.data.getRunValue(row):
+                url = self.data.getUrlValue(row)
+                method = self.data.getRequestMethodValue(row)
+                data = self.data.getDataValue(row) # 此时的data为dict且已处理空格和换行符
+                header = self.data.getHeaderValue(row)  # 此时已经是dict
+                expect = self.data.getExpectValue(row)  # 此时的expect为dict(单引号那种)但已处理空格和换行符
+                res = self.runMethod.run_main(method, url, data, header) # 这里的res是对象
+                # 进行预期结果和实际结果的判断
+                if self.comUtil.assert_dict(expect, res.json()):
+                    self.data.writeResultValue(row, 'pass')
+                    passCount.append(row)
                 else:
-                    ignoreCount.append(row)
-            except Exception as e:
-                print("something error ", e)
-            expect_log.info(expected)
+                    self.data.writeResultValue(row, res.text)  # 错误的信息写进去
+                    failedCount.append(row)
+            else:
+                ignoreCount.append(row)
+            #except Exception as e:
+                #print("something error ", e)
+            expect_log.info(expect)
             response_time_log.info(res.elapsed.total_seconds())  # 接口响应时间(单位s)
         if isemail:
             self.senEmail.send_main(passCount, failedCount)
@@ -59,8 +60,3 @@ class RunTest:
 if __name__ == '__main__':
     run = RunTest()
     run.go_on_run()
-
-
-
-
-

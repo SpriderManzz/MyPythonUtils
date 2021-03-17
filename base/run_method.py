@@ -22,8 +22,6 @@ class RunMethod:
         """
         进行数据处理：将data的str类型变成dict(json)
         """
-
-
         if header != None:
             res = requests.post(url=url, json=data, headers=header)
         else:
@@ -33,7 +31,8 @@ class RunMethod:
     def get_main(self, url, data=None, header=None):
         res = None
         if header != None:
-            res = requests.get(url=url, data={}, headers=header)
+            #res = requests.get(url=url, data={}, headers=header)
+            res = requests.get(url=url, params=data, headers=header)
         else:
             res = requests.get(url=url, params=data)
         return res
@@ -59,6 +58,11 @@ class RunMethod:
 if __name__ == '__main__':
     pass
 """  知识补充
+    print(type(r.text))      #查看接口返回类型★★★★★★★★★
+    r.json()                 #
+    
+    
+    
     r.encoding               #获取当前的编码
     r.encoding = 'utf-8'     #设置编码
     r.text                   #以encoding解析返回内容。字符串方式的响应体，会自动根据响应头部的字符编码进行解码。
@@ -70,6 +74,31 @@ if __name__ == '__main__':
     特殊方法
     r.json()                 #Requests中内置的JSON解码器，以json形式返回,前提返回的内容确保是json格式的，不然解析出错会抛异常
     r.raise_for_status()     #失败请求(非200响应)抛出异常
+    
+    json.loads()用于将字符串形式的数据转化为字典,且那个字典的key必须是""括起来,不然就报错
+    res = '{"msg": "msg", "statues": 0}'
+    res = json.loads(res) # 处理完后是res是字典形式,接口返回是{"key":"value"}
+    
+    dumps()
+    dumps(param)是将json数据对象转换为文本字符串的函数，其函数名是dump string 的缩写，意思是输出字符串，
+    所以其参数param必须要是json对象，也就是loads()函数返回的数据类型。
+    
+    在实际工作中，很多接口的响应都是json格式的数据，在测试中需要对其进行处理和分析。
+    设计到json数据处理的方法有两种：序列化和反序列化
+    python中序列化，简单讲就是将python的字典转换成json格式字符串，以便进行储存或者传输；
+    反序列化，简单讲就是将json格式字符串转换成python字典，用于对其进行分析和处理。
+    
+    # 序列化成json字符串
+    d = {‘name'：‘jod'}
+    j = json.dumps(d)
+     
+    #反序列化成字典
+    print json.loads(j)
+    而在requests库中，不用json.loads方法进行反序列化，而是提供了响应对象的json方法，用来对json格式的响应体进行反序列化
+    比如：
+    r = requests.get(url)
+    r.json()
+
 """
 
 

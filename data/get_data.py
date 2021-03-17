@@ -17,6 +17,7 @@ class GetData:
     def __init__(self):
         self.commonUtil = CommonUtil()
         self.opera_excel = OperationExcel()
+        self.data_dic = {}
 
     '''
     获取Excel的行数，也就是测试用例的case个数
@@ -45,7 +46,6 @@ class GetData:
     # 判断header是否为空
     def getHeaderValue(self, row):
         headerValue = self.opera_excel.getCellValue(row, headerLine)
-
         if headerValue == '':
             return None
         else:
@@ -63,26 +63,37 @@ class GetData:
         if data != '':
             data = json.loads(data)
             for key in data.keys():  # 在dict的字典里遍历每个key
-                if isinstance(data[key], str):  # 判断每个key对应的value是否为str
-                    if 'bm_' in data[key]:
-                        number = int(re.sub('\D', '', data[key]))  # 获取目标字符的数字
+                if isinstance(data[key], str):  # 判断每个key对应的value是否为str,如果是str才处理，而且还要看看是不是bm_开头的
+                    if 'bm_get' in data[key]:
+                        number = self.commonUtil.get_method_num(data[key])  # 获取用户输入的数字
+                        var_name = data[key].split(',')[1][:-1]  # 获取用户定义的的变量名
                         method = data[key].split('(')[0] + "()"  # 完整方法名拼接
                         if method == 'bm_get_int()':
                             data[key] = self.commonUtil.bm_get_int(number)
+                            self.data_dic[var_name] = data[key]  # 定义大字典的key值
                         elif method == 'bm_get_str()':
                             data[key] = self.commonUtil.bm_get_str(number)
-        else:
-            return None
-        return data
-
-    # 获取预期结果
+                            self.data_dic[var_name] = data[key]# 定义大字典的key值
+                        """如果是get類型才這樣處理"""
+                    data = json.dumps(data)# 转成字符串
+                    self.data_dic['req_data'] = data  # 处理完后追加到大的字典中
+                    data = json.loads(data)# 再次把data从字符串变回去字典
+                    if 'bm_set' in data[key]:
+                        set_var_name = data[key].split('(')[1][:-1]  # 获取set函数的变量名
+                        if set_var_name in self.data_dic.keys():
+                            data[key] = self.data_dic[set_var_name]
+                    data = json.dumps(data)  # 转成字符串
+                    self.data_dic['req_data'] = data  # 处理完后追加到大的字典中
+                    data = json.loads(data)  # 再次把data从字符串变回去字典
+            return json.loads(self.data_dic['req_data'])
+        return  None
     def getExpectValue(self, row):
         """
         因为在测试用例一般都是双引号的，所以目前采用json.loads()来处理
         """
         expect = self.opera_excel.getCellValue(row, expectDataLine).replace(" ", "").replace('\n', '')
+        # 这里容易报错,返回结果的key必须要是""的格式
         expect = json.loads(expect)# 字符串形式的数据转化为字典,但是字典是单引号
-        #eval(expect)
         if expect == '':
             return None
         return expect

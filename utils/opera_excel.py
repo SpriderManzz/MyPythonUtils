@@ -15,7 +15,7 @@ class OperationExcel:
             self.file_name = file_name
             self.sheet_id = sheet_id
         else:
-            self.file_name = '../cases/case.xls'
+            self.file_name = '../cases/caseend.xls'
             self.sheet_id = 0
         self.SheetValue = self.getSheetValue()
 
@@ -36,8 +36,7 @@ class OperationExcel:
 
     # 获取某一个单元格的内容(返回的json)
     def getCellValueToJsoon(self, row, col):
-        a = self.SheetValue.cell_value(row, col)
-        a
+        return self.SheetValue.cell_value(row, col)
 
     # 获取实际结果单元格的数据,并写进去
     def geteCellValue(self, row, col, value):
@@ -53,28 +52,28 @@ class OperationExcel:
         rows_data = self.get_row_values(row_num)  # 行内容
         return rows_data
 
-    # 根据对应的caseid找到对应的行号
-    def get_row_num(self, case_id):
-        num = 0
-        clols_data = self.get_cols_data()
-        for col_data in clols_data:
-            if case_id in col_data:
-                return num
-            num = num + 1
-
-    # 根据行号，找到该行的内容
-    def get_row_data(self, row):
-        tables = self.data
-        row_data = tables.row_values(row)  # 根据号获取行的内容，这就是行的内容了
-        return row_data
-
-    # 获取某一列的内容
-    def get_cols_data(self, col_id=None):
-        if col_id != None:
-            cols = self.data.col_values(col_id)  # 获取列的内容
-        else:
-            cols = self.data.col_values(0)
-        return cols
+    # # 根据对应的caseid找到对应的行号
+    # def get_row_num(self, case_id):
+    #     num = 0
+    #     clols_data = self.get_cols_data()
+    #     for col_data in clols_data:
+    #         if case_id in col_data:
+    #             return num
+    #         num = num + 1
+    #
+    # # 根据行号，找到该行的内容
+    # def get_row_data(self, row):
+    #     tables = self.data
+    #     row_data = tables.row_values(row)  # 根据号获取行的内容，这就是行的内容了
+    #     return row_data
+    #
+    # # 获取某一列的内容
+    # def get_cols_data(self, col_id=None):
+    #     if col_id != None:
+    #         cols = self.data.col_values(col_id)  # 获取列的内容
+    #     else:
+    #         cols = self.data.col_values(0)
+    #     return cols
 
 
 if __name__ == '__main__':
@@ -84,6 +83,6 @@ if __name__ == '__main__':
     print(opers.getLines())
 
     # 测试get_cell_value
-    data_value =opers.getCellValue(1,10)
-    print(type(data_value))
-    print(data_value)
+    #data_value =opers.getCellValue(1,10)
+    # print(type(data_value))
+    # print(data_value)
